@@ -157,7 +157,6 @@ h6 {
 }
 .text-wrapper {
     font-size:30px;
-    text-align: center;
 }
 .text-wrapper >* {
     display: block;
