@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+<h1>Posts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% current_user.posts.each do |post| %>
+      <tr>
+        <td><%= post.user_id %></td>
+        <td><%= post.title %></td>
+        <td><%= post.body %></td>
+        <td><%= link_to 'Show', post %></td>
+        <td><%= link_to 'Edit', edit_post_path(post) %></td>
+        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+      <% end %>
+  </tbody>
+
+</table>
+
+<%= button_to "Unfollow", unfollow_user_path(1) %>
+<%= button_to "follow", follow_user_path(0) %>
+
+
+
+<%= one = User.find(1) %>
+<%= two = User.find(2) %>
+
+
+<% current_user.all_following.each do |user_id| %>
+  <tr>
+    <td><%= user_id %></td>
+    <td><%= "ehy" %></td>
+  </tr>
+<% end %>
+<br>
+
+<%= link_to 'New Post', new_post_path %>
+
+
+<% unless user == current_user %>
+  <% if current_user.following?(user) %>
+    <%= button_to("Un-Follow #{user.nickname}", user_follow_path(user.to_param, current_user.get_follow(user).id), :method => :delete, :remote => true) %>
+  <% else %>
+    <%= button_to("Follow #{user.nickname}", user_follows_path(user.to_param), :remote => true) %>
+  <% end %>
+<% end %>
