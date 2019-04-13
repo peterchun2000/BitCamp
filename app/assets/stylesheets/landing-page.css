@@ -127,9 +127,12 @@ h6 {
 }
 
 .banner {
-    margin: 20px 0;
-    color: #black;
-    height: 30vh;
+    padding: 50px 0;
+    color: white;
+    height: 70vh;
+    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('/assets/benjamin-davies-287077-unsplash.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 .banner > .custom-container {
     display: grid;
@@ -146,6 +149,7 @@ h6 {
      height: 50px;
      background-color: black;
      color: white;
+     opacity: 0.8;
      border-radius: 5px;
      letter-spacing: 2px;
      font-size: 20px;
@@ -164,6 +168,7 @@ h6 {
 }
 .rotating-words {
     height: 50px;
+    position: relative;
 }
 .rotating-words span{
 	animation: topToBottom 12.5s linear infinite 0s;
@@ -173,7 +178,7 @@ h6 {
 	opacity: 0;
 	overflow: hidden;
 	position: absolute;
-	height: 70px;
+	height: 100%;
 }
 .rotating-words span:nth-child(2){
 	animation-delay: 2.5s;

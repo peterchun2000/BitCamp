@@ -25,8 +25,6 @@
 
 </table>
 
-<%= button_to "Unfollow", unfollow_user_path(1) %>
-<%= button_to "follow", follow_user_path(0) %>
 
 
 
@@ -44,11 +42,13 @@
 
 <%= link_to 'New Post', new_post_path %>
 
-
-<% unless user == current_user %>
-  <% if current_user.following?(user) %>
-    <%= button_to("Un-Follow #{user.nickname}", user_follow_path(user.to_param, current_user.get_follow(user).id), :method => :delete, :remote => true) %>
-  <% else %>
-    <%= button_to("Follow #{user.nickname}", user_follows_path(user.to_param), :remote => true) %>
+<table>
+  <tbody>
+<% User.all.each do |user| %>
+  <td><%= user.email %></td>
+  <% if !user.followed_by?(current_user) %>
+    <%= button_to "Unfollow", unfollow_follow_path(user) %>
   <% end %>
 <% end %>
+  </tbody>
+</table>
