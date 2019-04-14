@@ -1,4 +1,4 @@
-.w-100 > * {
+.search > * {
     margin-bottom: 20px;
     background-color:white;
     border-radius:10px;
@@ -6,7 +6,7 @@
     padding-bottom:5px;
     height:5rem;
 }
-.w-100 {
+.search {
       padding:0 5%;
 }
 .searchbar {

@@ -10,9 +10,9 @@
       </ul>
     </div>
   <% end %>
-<!--col-md-offset-->
+
   <div class="w-100 clearfix">
-    <div class="container col-md-5">
+    <div class="container col-md-6">
       <div class="field">
         <%= form.label :title %>
         <%= form.text_field :title %>
@@ -35,7 +35,7 @@
       </div>
     </div>
 
-    <div class="container col-md-offset-2 col-md-5">
+    <div class="container col-md-6">
       <strong>Post Preview:</strong><br>
       <div id="md-preview"></div>
     </div>
@@ -43,12 +43,10 @@
 
   <script>
   const maxShortLength = 200
-
   const titleEl = document.getElementById("post_title")
   const textArea = document.getElementById("post_body")
   const charCount = document.getElementById("char-count")
   const previewEl = document.getElementById("md-preview")
-
   // on load
   const len = textArea.textLength
   if (len <= maxShortLength) {
@@ -60,7 +58,6 @@
   }
   previewEl.textContent = "    " + textArea.value // padding to match RoR padding
   previewEl.classList.add("md-render") // will be rendered when the relevant script is loaded
-
   // every edit
   textArea.addEventListener('input', () => {
     const md = window.markdownit()

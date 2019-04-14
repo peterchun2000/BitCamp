@@ -24,7 +24,7 @@
 </div>
 
             
-<div class="w-100 clearfix">
+<div class="w-100 clearfix search">
   <% User.where("email LIKE ?", "%#{@search_string}%").each do |user| %>
     <div class="col-md-4 col-sm-3 col-lg-offset-0 col-sm-5 flex">
       <span class="flex-grow self-center text-wrap"style=""><%= user.email %></span>
