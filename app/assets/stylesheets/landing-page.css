@@ -157,8 +157,8 @@ body {
      justify-content:center;
      align-items:center;
      width: 200px;
-     height: 100px;
-     background-color: #938CBD;
+     height: 50px;
+     background-color: #66C7E7;
      color: white;
      opacity: 0.8;
      border-radius: 10px;
@@ -168,7 +168,7 @@ body {
 }
 #add-me-button:hover {
     text-decoration: none;
-    background-color: rgb(60,60,60);
+    background-color: #000000;
 }
 .text-wrapper {
     padding-top:100px;
