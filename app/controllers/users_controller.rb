@@ -1,13 +1,16 @@
 class UsersController < ApplicationController
   def follow
-    @profile = Profile.find(params[:id])
-    current_user.follow(@profile)
-    redirect_to :back
+    other_user = User.find(params[:user])
+    current_user = User.find(params[:curr_user])
+    current_user.follow(other_user)
+    redirect_to '/pages/search'
   end
 
   def unfollow
-    @profile = Profile.find(params[:id]) 
-    current_user.stop_following(@profile)
-    redirect_to :back
+    other_user = User.find(params[:user])
+    current_user = User.find(params[:curr_user])
+    current_user.stop_following(other_user)
+    redirect_to '/pages/search'
   end
+
 end

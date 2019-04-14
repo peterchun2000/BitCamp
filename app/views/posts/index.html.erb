@@ -26,29 +26,28 @@
 </table>
 
 
-
-
-<%= one = User.find(1) %>
-<%= two = User.find(2) %>
-
-
-<% current_user.all_following.each do |user_id| %>
-  <tr>
-    <td><%= user_id %></td>
-    <td><%= "ehy" %></td>
-  </tr>
-<% end %>
 <br>
 
+<br>
 <%= link_to 'New Post', new_post_path %>
-
-<table>
+<br>
+<table class="table">
   <tbody>
-<% User.all.each do |user| %>
-  <td><%= user.email %></td>
-  <% if !user.followed_by?(current_user) %>
-    <%= button_to "Unfollow", unfollow_follow_path(user) %>
-  <% end %>
-<% end %>
+    <% User.all.each do |user| %>
+      <% if user != current_user %>
+        <td><%= user.email %></td>
+      <% end %>
+      <% if !user.followed_by?(current_user) && user != current_user %>
+
+       <td><%= link_to "follow", follow_path(:user => user, :curr_user => current_user), :class => 'btn btn-primary'%> </td>
+       
+      <% elsif user.followed_by?(current_user) && user != current_user %>
+     
+       <td> <%= link_to "unfollow", unfollow_path(:user => user, :curr_user => current_user), :class => 'btn btn-primary'%> </td>
+     
+      <% end %>
+    <% end %>
   </tbody>
 </table>
+
+
