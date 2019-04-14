@@ -21,12 +21,14 @@
     <%= yield %>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/8.4.2/markdown-it.min.js"></script>
     <script>
-    const md = window.markdownit()
-    const mdElems = document.querySelectorAll(".md-render")
-    mdElems.forEach(el => {
-      el.classList.remove("md-render")
-      el.innerHTML = md.render(el.textContent.substring(4))
-    })
+    {
+      const md = window.markdownit()
+      const mdElems = document.querySelectorAll(".md-render")
+      mdElems.forEach(el => {
+        el.classList.remove("md-render")
+        el.innerHTML = md.render(el.textContent.substring(4))
+      })
+    }
     </script>
   </body>
 </html>

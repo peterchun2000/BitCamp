@@ -7,9 +7,10 @@ Rails.application.routes.draw do
     get 'auth/failure', to: redirect('/')
     get 'home', to: 'home#show'
     get 'me', to: 'me#show', as: 'me'
-     get 'follow' => "users#follow"
-     get 'unfollow' => "users#unfollow"
-     
+    get 'follow' => "users#follow"
+    get 'unfollow' => "users#unfollow"
+    get 'search' => "pages#search"
+
     root to: 'visitors#index'
     
 end
