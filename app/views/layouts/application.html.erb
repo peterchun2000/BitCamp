@@ -25,7 +25,6 @@
     const mdElems = document.querySelectorAll(".md-render")
     mdElems.forEach(el => {
       el.classList.remove("md-render")
-      console.log(el.textContent.substring(4))
       el.innerHTML = md.render(el.textContent.substring(4))
     })
     </script>

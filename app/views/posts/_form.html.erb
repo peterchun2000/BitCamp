@@ -11,17 +11,65 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+  <div class="w-100 clearfix">
+    <div class="container col-md-6">
+      <div class="field">
+        <%= form.label :title %>
+        <%= form.text_field :title %>
+      </div>
+
+      <div class="field">
+        <%= form.label :body %>
+        <%= form.text_area :body %>
+      </div>
+
+      <div class="actions">
+        <%= form.submit %>
+      </div>
+
+      <div>
+        <p id="char-count"></p>
+      </div>
+    </div>
+
+    <div class="container col-md-6">
+      <strong>Post Preview:</strong><br>
+      <div id="md-preview"></div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body %>
-  </div>
+  <script>
+  const maxShortLength = 200
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  const titleEl = document.getElementById("post_title")
+  const textArea = document.getElementById("post_body")
+  const charCount = document.getElementById("char-count")
+  const previewEl = document.getElementById("md-preview")
+
+  // on load
+  const len = textArea.textLength
+  if (len <= maxShortLength) {
+    titleEl.required = false
+    charCount.textContent = `short ${len}/${maxShortLength}`
+  } else {
+    titleEl.required = true
+    charCount.textContent = `long ${len}/${maxShortLength}`
+  }
+  previewEl.textContent = "    " + textArea.value // padding to match RoR padding
+  previewEl.classList.add("md-render") // will be rendered when the relevant script is loaded
+
+  // every edit
+  textArea.addEventListener('input', () => {
+    const md = window.markdownit()
+    const len = textArea.textLength
+    if (len <= maxShortLength) {
+      titleEl.required = false
+      charCount.textContent = `short ${len}/${maxShortLength}`
+    } else {
+      titleEl.required = true
+      charCount.textContent = `long ${len}/${maxShortLength}`
+    }
+    previewEl.innerHTML = md.render(textArea.value)
+  })
+  </script>
 <% end %>
