@@ -1,5 +1,10 @@
 .w-100 > * {
     margin-bottom: 20px;
+    background-color:white;
+    border-radius:10px;
+    padding-top:5px;
+    padding-bottom:5px;
+    height:5rem;
 }
 .w-100 {
       padding:0 5%;
@@ -14,4 +19,7 @@
 }
 #discover-title {
     text-align: center;
+}
+input[type="search"] {
+    border-radius: 10px;
 }

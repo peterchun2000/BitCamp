@@ -17,7 +17,12 @@
             <ul class="nav navbar-nav navbar-right">
                 <li>
                     <% if user_signed_in? %>
-                        <a href="/posts">TimeLine</a>
+                        <a href="/posts"  class="centernav">Timeline</a>
+                    <% end %>
+                </li>
+                <li>
+                    <% if user_signed_in? %>
+                        <a href="/pages/search"  class="centernav">Discover</a>
                     <% end %>
                 </li>
                 <li>
@@ -48,7 +53,7 @@
 
 
 <!-- Header -->
-<a id="about"></a>
+
 <div class="intro-header">
     <div class="container">
 
@@ -57,7 +62,7 @@
                 <div class="intro-message">
                     <h1>MotivateMe!</h1>
                     <h3>Help bring some motivational quotes into your life to boost confidence</h3>
-                    <hr class="intro-divider">
+                    <hr>
                     <ul class="list-inline intro-social-buttons">
                         <li>
                             <a href="#contact" class="btn btn-default btn-lg"><i></i> <span class="network-name">Try It Now!</span></a>
@@ -74,14 +79,14 @@
 
 <div data-aos="fade-right">
 <!-- Page Content -->
-
+<a id="about"></a>
 <a  name="services"></a>
 <div class="content-section-a">
 
     <div class="container">
         <div class="row">
             <div class="col-lg-5 col-sm-6">
-                <hr class="section-heading-spacer">
+                <hr>
                 <div class="clearfix"></div>
                 <h2 class="section-heading">Our Goal:<br>Happiness</h2>
                 <p class="lead">With our software we are striving for innovation related to mental health. We can help bring positivity and motivation into peoples lives, which in turn will help decrese stress and negative thoughts, as well as increase mental health.</p>
@@ -103,7 +108,7 @@
 
         <div class="row">
             <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-                <hr class="section-heading-spacer">
+                <hr>
                 <div class="clearfix"></div>
                 <h2 class="section-heading">Why to care<br></h2>
                 <p class="lead">Mental health is an issue that affects about 1 in 5 adults nationwide. That number increases to 1 in 4 when you narrow the demographics to college-aged adults. This is a huge issue all around the world that needs to be addressed and solves, this is the issue we are trying to tackle in our software.</p>
@@ -116,7 +121,7 @@
          <div class="container">
         <div class="row">
             <div class="col-lg-5 col-sm-6">
-                <hr class="section-heading-spacer">
+                <hr>
                 <div class="clearfix"></div>
                 <h2 class="section-heading">Our Project<br>And The Benefits</h2>
                 <p class="lead">Our project MotivateMe gives users access to a variety of insirational and motivatiol quotes that they will receive thorughout the day on our GroupMe chat, they can also be members of a community of people who are also loooking for more positivity in their life. On this community users can post their teachings, and advice as well as any inspirational messeges they have. MotivateMe will help boost confidence, and influence happiness. </p>
@@ -135,42 +140,49 @@
 </div>
 <!-- /.content-section-b -->
 
-
-<a  name="contact"></a>
+<a id="contact"></a>
 <div class="banner">
-    
-    <div class="custom-container">
-        
-    <div class="text-wrapper">
-        <div class="sentence"> Be added to our GroupMe</div>
-        <div>for</div>
-        <div class="rotating-words">
-            <span> insirational quotes</span>
-            <span> happiness</span>
-            <span> motivation</span>
-            <span> positivity</span>
-            <span> a family</span>
+   <div class="container">
+       <div class="row">
+           <div class="col-lg-12 col-lg-offset-1 col-md-10 col-md-offset-1">   
+           
+                <div class="custom-container">
+                    
+                <div class="text-wrapper">
+                    <div class="sentence"> Be Added to Our GroupMe</div>
+                    <br>
+                    <div class="">for
+                    
+                    <div class="rotating-words" style="bottom:18px;margin-left:1 5;margin-left:0px;border-left-width:7px;left:auto;padding-left:65px;">
+                        <span> Insirational Quotes</span>
+                        <span> Happiness</span>
+                        <span> Motivation</span>
+                        <span> Positivity</span>
+                        <span> a Family</span>
         </div>
+         </div>
     </div>
-    <a href="https://web.groupme.com/join_group/49776115/MUyHF36J" id="add-me-button" target = "_blank">Add Me</a>
-    
+
+    </div>
+    </div>    
+    </div>    
     </div>
     <!-- /.container -->
-    
+       <div class="container">
 <div class="row">
-            <div class="col-lg-5 col-sm-6">
-                <!--<hr class="section-heading-spacer">-->
-                <div class="clearfix"></div>
-                <h2 class="section-heading">Have Questions?</h2>
-               
-                <p class="lead">If you have any questions about MotivateMe feel free to <a id="email-link" href = "mailto:example@gmail.com?Subject=MotivateMe">email us</a></p>
-            </div>
-            <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                <img class="img-responsive" src="" alt="">
-            </div>
+        <div class="col-lg-12 col-lg-offset-1 col-md-10 col-md-offset-1">   
+            <!--<hr class="section-heading-spacer">-->
+            <div class="clearfix"></div>
+            <h2 class="section-heading">Have Questions?</h2>
+           
+            <p class="lead">If you have any questions about MotivateMe feel free to <a id="email-link" href = "mailto:example@gmail.com?Subject=MotivateMe">email us</a></p>
         </div>
+        <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+            <img class="img-responsive" src="" alt="">
+        </div>
+    </div>
 
-
+</div>
 </div>
 <!-- /.banner -->
 
