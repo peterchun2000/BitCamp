@@ -93,6 +93,7 @@ $color_grey_dark: #a2a2a2;
     }
   }
   .description {
+    max-width: 60%;
     padding: 1rem;
     background: $color_white;
     position: relative;
@@ -112,6 +113,13 @@ $color_grey_dark: #a2a2a2;
       text-transform: uppercase;
       color: $color_grey_dark;
       margin-top: 5px;
+    }
+    .title {
+      background-color: #e2e2e2;
+      border-radius: 1rem;
+      border: 0;
+      padding: 1rem;
+      display: inline;
     }
     .read-more {
       text-align: right;
@@ -136,13 +144,6 @@ $color_grey_dark: #a2a2a2;
     }
   }
   p {
-
-    height:60px;
-    line-height:20px; /* Height / no. of lines to display */
-    overflow:hidden;
-
-    position: relative;
-    margin: 1rem 0 0;
     &:first-of-type {
       margin-top: 1.25rem;
       &:before {
@@ -165,7 +166,6 @@ $color_grey_dark: #a2a2a2;
 
   @media (min-width: 640px) {
     flex-direction: row;
-    max-width: 700px;
     .meta {
       flex-basis: 40%;
       height: auto;

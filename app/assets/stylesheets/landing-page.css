@@ -170,7 +170,8 @@ body {
     background-color: rgb(60,60,60);
 }
 .text-wrapper {
-    font-size:30px;
+    font-size: 30px;
+    line-height: 30px;
 }
 .text-wrapper >* {
     display: block;

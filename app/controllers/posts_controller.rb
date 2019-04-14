@@ -62,11 +62,6 @@ class PostsController < ApplicationController
     end
   end
 
-  # # Convenience methods
-  # def is_short?
-  #   return @post.title == "" && @post.body.length <= 200
-  # end
-
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
