@@ -5,16 +5,16 @@
   <%= link_to "search", search_path(search_string: ""), id: 'search-button', class: 'btn btn-primary'%>
 </div>
 
-<h1><%= current_user %></h1>
-
 <div class="w-100 clearfix">
   <% User.where("email LIKE ?", "%#{@search_string}%").each do |user| %>
     <div class="col-md-3 col-sm-4 col-xs-12 flex">
-      <span class="flex-grow"><%= user.email %></span>
+      <span class="flex-grow self-center text-wrap"><%= user.email %></span>
       <% if !user.followed_by?(current_user) && user != current_user %>
         <%= link_to "follow", follow_path(user: user), class: 'btn btn-primary'%>
       <% elsif user != current_user %>
         <%= link_to "unfollow", unfollow_path(user: user), class: 'btn btn-danger'%>
+      <% else %>
+        <span class="btn btn-primary disabled">You</span>
       <% end %>
     </div>
   <% end %>
@@ -29,6 +29,11 @@
 
   searchInput.addEventListener('input', () => {
     searchButton.href = baseSearchUrl + searchInput.value
+  })
+  searchInput.addEventListener("keyup", event => {
+    if (event.key === "Enter") {
+      searchButton.click()
+    }
   })
 }
 </script>

@@ -15,15 +15,3 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
-
-// Scrolls to the selected menu item on the page
-$(function() {
-    $("nav").find("a").click(function(e) {
-        e.preventDefault();
-        var section = $(this).attr("href");
-        // alert(section)
-        $('html, body').animate({
-                scrollTop: $(section).offset().top
-            }, 900);
-    });
-});

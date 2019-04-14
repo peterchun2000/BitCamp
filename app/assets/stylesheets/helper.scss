@@ -9,3 +9,12 @@
 .flex-grow {
     flex-grow: 1;
 }
+
+.self-center {
+    align-self: center;
+}
+
+.text-wrap {
+    overflow: hidden;
+    word-wrap: break-word;
+}
