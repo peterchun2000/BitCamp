@@ -58,7 +58,7 @@
     titleEl.required = true
     charCount.textContent = `long ${len}/${maxShortLength}`
   }
-  previewEl.textContent = "    " + textArea.value // padding to match RoR padding
+  previewEl.textContent = textArea.value
   previewEl.classList.add("md-render") // will be rendered when the relevant script is loaded
 
   // every edit

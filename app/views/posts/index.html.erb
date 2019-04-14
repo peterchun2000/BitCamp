@@ -63,7 +63,7 @@
             </div>
             <div class="description">
               <% if post.is_short? %>
-                <%= render "post", post: post %>
+                <div class="post md-render"><%= post.body %></div>
               <% else %>
                 <h1 class="title"><%= post.title %></h1>
                 <p class="read-more">
