@@ -1,11 +1,11 @@
-<h1>Discover</h1>
+<h1 id="discover-title">Discover</h1>
 <div class="searchbar">
-  <span>Search </span>
+  <span style="align-self:center">Search </span>
   <input type="search" id="search-input" value="<%= @search_string %>">
   <%= link_to "search", search_path(search_string: ""), id: 'search-button', class: 'btn btn-primary'%>
 </div>
 
-<h1><%= current_user %></h1>
+
 
 <div class="w-100 clearfix">
   <% User.where("email LIKE ?", "%#{@search_string}%").each do |user| %>

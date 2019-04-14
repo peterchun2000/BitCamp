@@ -116,7 +116,7 @@ $color_grey_dark: #a2a2a2;
     .read-more {
       text-align: right;
       a {
-        color: #808B96;
+        color: #808B96 !important;
         display: inline-block;
         position: relative;
         &:after {

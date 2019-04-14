@@ -7,7 +7,7 @@ html, .body {
     height: 100%;
     scroll-behavior: smooth;
     overflow-x: hidden;
-    background: white !important;
+    background: #E8E8E8 !important;
     
 }
 .post {
@@ -57,6 +57,17 @@ tbody {
     background-color:#000021 !important;
 }
 .well {
-    background: #eaefff;
+    background: white;
     margin:10px;
+}
+
+hr {
+    border: 0;
+    height: 3px;
+    background: white;
+
+}
+
+.edittitle {
+    
 }
