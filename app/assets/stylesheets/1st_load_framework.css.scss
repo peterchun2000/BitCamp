@@ -11,7 +11,11 @@ img {
 .navbar-brand {
   font-size: inherit;
   }
-
+.navbar-custom {
+    background-color:#ECECEC;
+    color:#ffffff;
+    border-radius:0;
+}
 // THESE ARE EXAMPLES YOU CAN MODIFY
 // create your own classes
 // to make views framework-neutral
