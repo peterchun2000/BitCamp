@@ -1,0 +1,15 @@
+
+#sign-in-container {
+    background-image: linear-gradient(to top, #7c7dcd, #5e84cd, #428ac7, #2c8dbd, #278fb1);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    color: white;
+}
+.alert {
+    margin-bottom: 0;
+}

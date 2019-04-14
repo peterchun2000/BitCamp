@@ -1,0 +1,38 @@
+.well {
+    margin: 20% auto;
+    background-color: rgba(0,0,0,0.5);
+    border:0;
+    border-radius: 10px; 
+}
+#sign-up-container {
+    background-image: linear-gradient(to top, #7c7dcd, #5e84cd, #428ac7, #2c8dbd, #278fb1);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    color: white;
+}
+.btn-success {
+    background-color: #1DB5E4;
+    border:0;
+    width: 100%;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+.btn-success:hover {
+     background-color:#7A7DCD;
+}
+.btn-success:active {
+     background-color:#7A7DCD !important;
+}
+
+.user-links {
+    color:white !important;
+}
+.user-links:hover {
+    background-color: #1DB5E4;
+    text-decoration: none;
+}
