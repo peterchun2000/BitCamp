@@ -15,6 +15,11 @@ html, .body {
     font-weight: normal;
     overflow: hidden;
     word-wrap: break-word;
+
+    .post-body {
+        background-color: #E8E8E8;
+        padding: 1rem;
+    }
 }
 .postheader {
     padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
@@ -23,9 +28,6 @@ html, .body {
     background: #7FC9E1;
     background-size: cover;
     color:white;
-}
-tbody {
-    
 }
 .action-links {
     color:black!important;
