@@ -13,7 +13,7 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    color: white;
+    color: #000000;
 }
 .btn-success {
     background-color: #1DB5E4;
@@ -30,7 +30,7 @@
 }
 
 .user-links {
-    color:white !important;
+    color:#000000 !important;
 }
 .user-links:hover {
     background-color: #1DB5E4;

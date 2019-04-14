@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require rails-ujs
-//= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+
+// Scrolls to the selected menu item on the page
