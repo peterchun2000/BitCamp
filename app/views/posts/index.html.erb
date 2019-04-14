@@ -30,24 +30,5 @@
 
 <br>
 <%= link_to 'New Post', new_post_path %>
-<br>
-<table class="table">
-  <tbody>
-    <% User.all.each do |user| %>
-      <% if user != current_user %>
-        <td><%= user.email %></td>
-      <% end %>
-      <% if !user.followed_by?(current_user) && user != current_user %>
-
-       <td><%= link_to "follow", follow_path(:user => user, :curr_user => current_user), :class => 'btn btn-primary'%> </td>
-       
-      <% elsif user.followed_by?(current_user) && user != current_user %>
-     
-       <td> <%= link_to "unfollow", unfollow_path(:user => user, :curr_user => current_user), :class => 'btn btn-primary'%> </td>
-     
-      <% end %>
-    <% end %>
-  </tbody>
-</table>
 
 

@@ -16,6 +16,11 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
+                    <% if user_signed_in? %>
+                        <a href="/posts">TimeLine</a>
+                    <% end %>
+                </li>
+                <li>
                     <a href="#about">About</a>
                 </li>
                 <li>
@@ -24,6 +29,7 @@
                 <li>
                     <a href="#contact">Contact</a>
                 </li>
+                
                 
             <% if user_signed_in? %>
                   <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "btn btn-default navbar-btn" %>
@@ -113,11 +119,8 @@
                 <hr class="section-heading-spacer">
                 <div class="clearfix"></div>
                 <h2 class="section-heading">Our Project<br>And The Benefits</h2>
-<<<<<<< HEAD
-                <p class="lead">Our project MotivateMe! gives users access to a variety of insirational and motivatiol quotes that they will receive thorughout the day on our GroupMe account. Once they press the Add Me button below then they will be user acces to quotes thorughout the day, and a community of people who are also loooking for more positivity in their life. MotivateMe will help boost confidence, and influence happiness. </p>
-=======
-                <p class="lead">Our project MotivateMe! gives users access to a variety of insirational and motivatiol quotes that they will receive thorughout on a GroupMe account. They will be added to our GroupMe once they press the Add Me button below. This will allow the user acces to quotes thorughout the day, and a community of people who are also loooking for more positivity in their life. MotivateMe will help boost confidence, and influence happiness. </p>
->>>>>>> posts
+                <p class="lead">Our project MotivateMe! gives users access to a variety of insirational and motivatiol quotes that they will receive thorughout the day on our GroupMe account, they will also be members of a community of people who are also loooking for more positivity in their life. On this community they can post their teaching, and advice as well as any inspirational messeges they have. MotivateMe will help boost confidence, and influence happiness. </p>
+
             </div>
             <div class="col-lg-5 col-lg-offset-2 col-sm-6">
                 <img class="img-responsive" src="/assets/anthony-garand-504429-unsplash.jpg" alt="">
