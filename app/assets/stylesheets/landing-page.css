@@ -173,6 +173,7 @@ body {
 .text-wrapper {
     padding-top:100px;
     font-size:30px;
+    line-height: 30px;
 }
 .text-wrapper >* {
     display: block;
