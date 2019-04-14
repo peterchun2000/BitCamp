@@ -1,19 +1,32 @@
-<article class="post">
-  <header class="intro-header" style="background-image: url(<%= post.photos %>)">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-          <div class="post-heading">
-            <h1 style="font-size:80px"><%= post.title %></h1>
-            <span class="meta"><a href="#"></a><%= post.created_at.to_date %></span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
 
-  <!-- Post Content -->
-  <div class="post-body">
-    <div class="md-render"><%= post.body %></div>
-  </div>
+<header class="intro-header" style="background-image: url(<%= post.photos %>)">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1 style="font-size:80px"><%= post.title %></h1>
+                    <span class="meta"><a href="#"></a><%=post.created_at.to_date%></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">  
+            <div class="jumbotron">
+              <h1 class="display-4" style="font-size:35px"><%= post.body %></h1>
+              </div>
+            </div>
+        </div>
+    </div>
 </article>
+<% if user_signed_in? %>
+    <%= link_to 'Edit', edit_post_path(post) %> 
+    <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
+
+
