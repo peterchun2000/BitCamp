@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_13_184022) do
+ActiveRecord::Schema.define(version: 2019_04_14_035433) do
 
   create_table "follows", force: :cascade do |t|
     t.string "followable_type", null: false
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 2019_04_13_184022) do
     t.datetime "updated_at", null: false
     t.string "author"
     t.integer "user_id"
+    t.string "photos"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
