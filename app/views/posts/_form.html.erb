@@ -52,7 +52,8 @@
 
   // on load
   const len = textArea.textLength
-  if (len <= maxShortLength) {
+  const hasTitle = titleEl.value.length != 0
+  if (len <= maxShortLength && !hasTitle) {
     titleEl.required = false
     charCount.textContent = `short ${len}/${maxShortLength}`
   } else {
