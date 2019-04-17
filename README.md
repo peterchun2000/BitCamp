@@ -1,7 +1,7 @@
 MotivateMe
 
 check out the webapp here:
-https://peaceful-sierra-44939.herokuapp.com/
+https://motivateme4u.herokuapp.com/
 ================
 
 Problems? Issues?
